@@ -1,11 +1,11 @@
-package dev.jfredericoneto;
+package dev.jfredericoneto.bytebank;
 
 import java.util.Scanner;
 
-import dev.jfredericoneto.domain.RegraDeNegocioException;
-import dev.jfredericoneto.domain.cliente.DadosCadastroCliente;
-import dev.jfredericoneto.domain.conta.ContaService;
-import dev.jfredericoneto.domain.conta.DadosAberturaConta;
+import dev.jfredericoneto.bytebank.domain.RegraDeNegocioException;
+import dev.jfredericoneto.bytebank.domain.cliente.DadosCadastroCliente;
+import dev.jfredericoneto.bytebank.domain.conta.ContaService;
+import dev.jfredericoneto.bytebank.domain.conta.DadosAberturaConta;
 
 public class BytebankApplication {
     private static ContaService service = new ContaService();

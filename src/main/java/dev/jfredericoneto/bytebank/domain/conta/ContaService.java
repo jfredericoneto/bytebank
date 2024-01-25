@@ -1,11 +1,11 @@
-package dev.jfredericoneto.domain.conta;
+package dev.jfredericoneto.bytebank.domain.conta;
 
 import java.math.BigDecimal;
 import java.util.HashSet;
 import java.util.Set;
 
-import dev.jfredericoneto.domain.RegraDeNegocioException;
-import dev.jfredericoneto.domain.cliente.Cliente;
+import dev.jfredericoneto.bytebank.domain.RegraDeNegocioException;
+import dev.jfredericoneto.bytebank.domain.cliente.Cliente;
 
 public class ContaService {
 

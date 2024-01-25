@@ -1,9 +1,9 @@
-package dev.jfredericoneto.domain.conta;
+package dev.jfredericoneto.bytebank.domain.conta;
 
 import java.math.BigDecimal;
 import java.util.Objects;
 
-import dev.jfredericoneto.domain.cliente.Cliente;
+import dev.jfredericoneto.bytebank.domain.cliente.Cliente;
 
 public class Conta {
 

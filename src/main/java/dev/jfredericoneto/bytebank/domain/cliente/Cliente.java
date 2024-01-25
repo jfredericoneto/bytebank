@@ -1,6 +1,5 @@
-package dev.jfredericoneto.domain.cliente;
+package dev.jfredericoneto.bytebank.domain.cliente;
 
-import java.time.LocalDate;
 import java.util.Objects;
 
 public class Cliente {

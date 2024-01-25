@@ -1,4 +1,4 @@
-package dev.jfredericoneto.domain;
+package dev.jfredericoneto.bytebank.domain;
 
 public class RegraDeNegocioException extends RuntimeException {
     public RegraDeNegocioException(String mensagem) {
