@@ -2,15 +2,12 @@ package dev.jfredericoneto.bytebank.domain.conta;
 
 import java.math.BigDecimal;
 import java.sql.Connection;
-import java.util.HashSet;
 import java.util.Set;
 
 import dev.jfredericoneto.bytebank.ConnectionFactory;
 import dev.jfredericoneto.bytebank.domain.RegraDeNegocioException;
 
 public class ContaService {
-
-    private Set<Conta> contas = new HashSet<>();
 
     private ConnectionFactory connection;
 
@@ -73,6 +70,17 @@ public class ContaService {
         Connection conn = connection.recuperarConexao();
 
         new ContaDAO(conn).deletar(numeroDaConta);
+    }
+
+    public void encerrarLogico(Integer numeroDaConta) {
+        var conta = buscarContaPorNumero(numeroDaConta);
+        if (conta.possuiSaldo()) {
+            throw new RegraDeNegocioException("Conta não pode ser encerrada pois ainda possui saldo!");
+        }
+
+        Connection conn = connection.recuperarConexao();
+
+        new ContaDAO(conn).alterarLogico(numeroDaConta);
     }
 
     private Conta buscarContaPorNumero(Integer numero) {
